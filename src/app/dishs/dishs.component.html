@@ -1,0 +1,22 @@
+
+<h1 class='text-center fw-bolder my-4'>Our Dishes</h1>
+<div class="row mt-4 mb-5 d-flex justify-content-center">
+    <div class="col-md-4 shadow my-3"*ngFor='let meal of dish'>
+        <img [src]="meal.image" alt="Meal-Image" class="w-100">
+        <p class="fs-5 mt-2">{{meal.desc}}</p>
+        <h5 class='mb-3 mt-1'[class]="meal.price<100?'text-danger':'text-success'"><span>Price:</span> {{meal.price}}</h5>
+        <button (click)="selected(meal)" class="btn btn-info text-white mb-3 px-4 py-2">See More</button>
+    </div>
+
+  </div>
+  <div class="container my-5">
+    <div class="show-selected text-center row d-flex justify-content-center">
+      <div class="col-md-4">
+          <img [src]="imgSrc" alt="">
+          <h2 class="fs-1 mt-3 fw-bolder"[style.color]="price<100?'red':'green'">{{name}}</h2>
+      </div>
+
+  </div>
+
+
+
